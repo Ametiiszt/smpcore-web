@@ -1,0 +1,133 @@
+body{
+    background-color: #0f1013;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 40px;
+    background-color: #0b0b0c;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    font-family: HISKYFLIPPERHI;
+    gap: 15px;
+    font-size: 25px;
+    font-weight: 700;
+}
+.links{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+button{
+    font-family: HISKYFLIPPERHI;
+    align-items:center;
+    display: flex;
+    font-weight:700;
+    font-size: 20px;
+    border-radius: 4px;
+    border-width: 0;
+    height: 50px;
+
+    color: white;
+}
+#discord{
+    transition: background-color 200ms ease;
+    background-color: #0b0b0c;
+    color: white;
+    transition: scale 200ms ease;
+}
+#discord:hover{
+    background-color: #181a20;
+    scale: 1.1;
+}
+#download{
+    transition: scale 200ms ease;
+    background-color: #4887cf;
+    filter: drop-shadow(0 0 5px #4887cf);
+}
+#download:hover{
+    scale: 1.1;
+}
+hr{
+    margin-left: 45%;
+    margin-right: 45%;
+}
+main{
+    text-align: center;
+    font-size: 75px;
+    font-weight: 700;
+    line-height: 20px;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+#highlight{
+    color:#4887cf;
+}
+#smpcore{
+    height: 300px;
+    filter: drop-shadow(0 0 30px rgb(30, 35, 43)) drop-shadow(0 0 50px rgb(30, 35, 43));
+    animation-name: slideUp;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function:linear;
+}
+.smpcoredescription{
+    font-weight:400;
+    font-size: 20px;
+    color: rgb(160, 160, 160);
+    line-height: 3px;
+    overflow: visible;
+}
+.box{
+    border-style: solid;
+    border-color: #21232b;
+    border-radius: 10px;
+    transition: scale 200ms;
+    padding: 0 15px;
+    flex: 1;
+    font-family: HISKYFLIPPERHI;
+    max-width: 500px;
+}
+.section{
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 40px;
+    gap: 40px;
+    margin: 20px 20%;
+}
+.box:hover{
+    scale: 1.02;
+}
+.sectionDescription{
+    font-weight:400;
+    font-size: 20px;
+    color: rgb(160, 160, 160);
+    line-height: 25px;
+    font-family: "Open Sans";
+}
+@keyframes slideUp{
+    from{
+        transform: translateY(10px);
+    }
+}
+@keyframes grow{
+    to{
+        transform: scale(1.1, 1.1);
+    }
+}
+@font-face {
+    font-family: HISKYFLIPPERHI;
+    src: url(fonts/HISKYFLIPPERHI.ttf);
+}
