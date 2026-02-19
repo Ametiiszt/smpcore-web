@@ -1,7 +1,7 @@
 body{
     background-color: #0f1013;
     color: white;
-    font-family: "Open Sans", sans-serif;
+    font-family: Mojang-Bold;
     margin: 0;
 }
 header{
@@ -19,6 +19,10 @@ header{
     gap: 15px;
     font-size: 25px;
     font-weight: 700;
+    transition: scale 200ms ease;
+}
+.logo:hover{
+    scale: 1.1;
 }
 .links{
     display: flex;
@@ -34,12 +38,12 @@ button{
     border-radius: 4px;
     border-width: 0;
     height: 50px;
-
+    padding: 20px 20px;
     color: white;
 }
 #discord{
     transition: background-color 200ms ease;
-    background-color: #0b0b0c;
+    background-color: transparent;
     color: white;
     transition: scale 200ms ease;
 }
@@ -50,7 +54,6 @@ button{
 #download{
     transition: scale 200ms ease;
     background-color: #4887cf;
-    filter: drop-shadow(0 0 5px #4887cf);
 }
 #download:hover{
     scale: 1.1;
@@ -58,6 +61,10 @@ button{
 hr{
     margin-left: 45%;
     margin-right: 45%;
+    animation: fadeIn 5s;
+    animation-delay: 450ms;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
 main{
     text-align: center;
@@ -75,11 +82,9 @@ a {
 #smpcore{
     height: 300px;
     filter: drop-shadow(0 0 30px rgb(30, 35, 43)) drop-shadow(0 0 50px rgb(30, 35, 43));
-    animation-name: slideUp;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate-reverse;
-    animation-timing-function:linear;
+    animation: 
+        slideUp 2s linear infinite alternate-reverse,
+        pulse 2s ease-in-out infinite alternate-reverse;
 }
 .smpcoredescription{
     font-weight:400;
@@ -87,8 +92,19 @@ a {
     color: rgb(160, 160, 160);
     line-height: 3px;
     overflow: visible;
+    font-family: "Open Sans";
+    opacity: 0;
+    animation-name: smpcoredescriptionanimation;
+    animation-duration: 1000ms;
+    animation-delay: 500ms;
+    animation-fill-mode: forwards;
+}
+#smpcoreTitle{
+    animation-name: grow;
+    animation-duration: 1000ms;
 }
 .box{
+    animation: slideIn 1000ms;
     border-style: solid;
     border-color: #21232b;
     border-radius: 10px;
@@ -122,12 +138,52 @@ a {
         transform: translateY(10px);
     }
 }
-@keyframes grow{
+@keyframes pulse{
+    from{
+        filter: drop-shadow(0 0 15px rgb(30, 35, 43)) drop-shadow(0 0 30px rgb(30, 35, 43));
+    }
     to{
-        transform: scale(1.1, 1.1);
+        filter: drop-shadow(0 0 30px rgb(30, 35, 43)) drop-shadow(0 0 50px rgb(30, 35, 43));
+    }
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes slideIn{
+    from{
+        transform: translateY(100%);
+        filter: blur(5px);
+    }
+}
+@keyframes grow{
+    from{
+        transform: scale(0.9, 0.9);
+    }
+}
+@keyframes smpcoredescriptionanimation{
+    from{
+        opacity: 0;
+        filter: blur(1px);
+        transform: translateY(-50px);
+    }
+    to{
+        opacity: 1;
     }
 }
 @font-face {
     font-family: HISKYFLIPPERHI;
     src: url(fonts/HISKYFLIPPERHI.ttf);
+}
+@font-face {
+    font-family: Mojang-Bold;
+    src: url(fonts/Mojang-Bold.ttf);
+}
+@font-face {
+    font-family: Mojang-Regular;
+    src: url(fonts/Mojang-Regular.ttf);
 }

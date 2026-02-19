@@ -1,0 +1,53 @@
+.downloadSection{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    gap: 40px;
+    margin: 20px 5%;
+    text-align: left;
+    padding-bottom: 0px;
+    line-height: 0px;
+}
+.downloadBox{
+    animation: slideIn 1000ms;
+    border-style: solid;
+    border-color: #21232b;
+    border-radius: 10px;
+    padding: 30px 30px;
+    padding-bottom: 50px;
+    font-family: HISKYFLIPPERHI;
+}
+.versiondescription{
+    font-weight:400;
+    font-size: 20px;
+    color: rgb(160, 160, 160);
+    line-height: 3px;
+    overflow: visible;
+    font-family: "Open Sans";
+}
+#latest{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: scale 200ms ease;
+    background-color: #4887cf;
+}
+#latest:hover{
+    scale: 1.05;
+}
+#history{
+    transition: background-color 200ms ease;
+    background-color: transparent;
+    color: white;
+    padding: 10px 10px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+#history:hover{
+    background-color: #181a20;
+}
+.historyLine{
+    margin-left: 0;
+    margin-right: 0;
+}
