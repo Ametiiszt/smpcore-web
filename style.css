@@ -108,7 +108,8 @@ a {
     border-style: solid;
     border-color: #21232b;
     border-radius: 10px;
-    transition: scale 200ms;
+    background-color: transparent;
+    transition: scale 200ms, background-color 200ms;
     padding: 0 15px;
     flex: 1;
     font-family: HISKYFLIPPERHI;
@@ -125,6 +126,7 @@ a {
 }
 .box:hover{
     scale: 1.02;
+    background-color: #181a20;
 }
 .sectionDescription{
     font-weight:400;
