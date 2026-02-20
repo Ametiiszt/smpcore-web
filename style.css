@@ -20,7 +20,9 @@ footer{
     align-items: center;
     justify-content: center;
     color: #7a7d8a;
-    
+}
+button{
+    cursor: pointer;
 }
 .logo{
     display: flex;
@@ -133,6 +135,7 @@ a {
     line-height: 40px;
     gap: 40px;
     margin: 20px 20%;
+    cursor: pointer;
 }
 .box:hover{
     scale: 1.02;
