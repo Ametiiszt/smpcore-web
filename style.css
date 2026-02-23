@@ -1,5 +1,5 @@
 body{
-    background-color: #0f1013;
+    background-image: linear-gradient(#0f1013, #030507);
     color: white;
     font-family: Mojang-Bold;
     margin: 0;
@@ -21,9 +21,6 @@ footer{
     justify-content: center;
     color: #7a7d8a;
 }
-button{
-    cursor: pointer;
-}
 .logo{
     display: flex;
     align-items: center;
@@ -42,12 +39,13 @@ button{
     gap: 25px;
 }
 button{
+    cursor: pointer;
     font-family: HISKYFLIPPERHI;
     align-items:center;
     display: flex;
     font-weight:700;
     font-size: 20px;
-    border-radius: 4px;
+    border-radius: 10px;
     border-width: 0;
     height: 50px;
     padding: 20px 20px;
@@ -65,18 +63,26 @@ button{
 }
 #download{
     transition: scale 200ms ease;
-    background-color: #4887cf;
+    background-image: linear-gradient(45deg,#4887cf, #57a6d4);
 }
 #download:hover{
     scale: 1.1;
 }
-hr{
+.hr{
     margin-left: 45%;
     margin-right: 45%;
+    margin-top: 35px;
+    margin-bottom: 35px;
     animation: fadeIn 5s;
     animation-delay: 450ms;
     opacity: 0;
     animation-fill-mode: forwards;
+    border-color: white;
+}
+hr{
+    margin: 0;
+    opacity: 0.1;
+    border-color: #21232b;
 }
 main{
     text-align: center;
@@ -118,8 +124,9 @@ a {
 .box{
     animation: slideIn 1000ms;
     border-style: solid;
-    border-color: #21232b;
-    border-radius: 10px;
+    border-color: #17181d;
+    border-radius: 25px;
+    border-width: 2px;
     background-color: transparent;
     transition: scale 200ms, background-color 200ms;
     padding: 0 15px;
@@ -139,7 +146,8 @@ a {
 }
 .box:hover{
     scale: 1.02;
-    background-color: #181a20;
+    
+    background-image: linear-gradient(90deg,#101216,  transparent, #101216);
 }
 .sectionDescription{
     font-weight:400;
